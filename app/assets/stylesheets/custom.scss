@@ -5,6 +5,15 @@ body{
 	margin-bottom:35px;
 }
 
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+
 /* topページ */
 .bg-2{
 	background-color:#f2f2f4!important;
@@ -139,7 +148,10 @@ textarea.form-control {
 .no-text-decoration{
 	text-decoration:none!important;
 	color:#000000!important;
+  margin-right: 20px
 }
+
+
 .far{
 	margin-left:15px;
 	font-size:16px;
