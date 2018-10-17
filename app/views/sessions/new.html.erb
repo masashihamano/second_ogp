@@ -1,9 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-6 offset-lg-3">
-      <%#= form_for(@user) do |f| %>
-      <%= form_for(@user) do |f| %>
-        <%= render 'shared/error_messages' %>
+      <%#= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= form_for(:session, url: login_path) do |f| %>
+        <%#= devise_error_messages! %>
+
         <div class="form-group">
           <%= f.label :メールアドレス %>
           <%= f.email_field :email, autofocus: true, autocomplete: "メールアドレス", class:"form-control" %>
@@ -17,17 +18,26 @@
         </div>
          <div class="form-group">
           <%= f.label :パスワードの確認 %>
-          <%= f.password_field :password_confirmation, autocomplete: "パスワードの確認", class:"form-control" %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control" %>
         </div>
+
+
+          <div class="form-check">
+            <%= f.label :remember_me, class: "form-check-input" do %>
+            <%= f.check_box :remember_me %>
+            <span>情報を保存する</span>
+          <% end %>
+          </div>
+
         <div class="action text-center">
-          <%= f.submit "会員登録する", method: :post, class:"btn text-centers" %>
+          <%= f.submit "ログインする", class:"btn text-centers" %>
         </div>
         <div class="link-action text-center">
+
+          <p><%= link_to "会員登録はこちら", signup_path %></p>
           <%#= render "devise/shared/links" %>
-          <p><%= link_to "ログインはこちら", login_path %></p>
         </div>
       <% end %>
     </div>
   </div>
-</div>
 </div>
