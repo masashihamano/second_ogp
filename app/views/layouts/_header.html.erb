@@ -1,13 +1,13 @@
 <header class="navbar navbar-expand-lg bg-2 navbar-light header">
   <div class="container">
-    <a class="navbar-brand" href="/jobs">Second_OPG</a>
+    <a class="navbar-brand" href="/jobs/new">Second_OPG</a>
       <%# if user_signed_in? %>
       <ul class="nav navbar-nav navbar-right">
     <% if logged_in? %>
       <div class="my-2 my-lg-0">
-      <%= link_to 'ホーム', "root_path", class: "no-text-decoration" %>
+      <%= link_to 'ホーム', root_path, class: "no-text-decoration" %>
       <%= link_to '一覧ページ', "#", class: "no-text-decoration" %>
-      <%= link_to 'ログアウト', "logout_path", class: "no-text-decoration", method: :delete %>
+      <%= link_to 'ログアウト', 'logout_path', class: "no-text-decoration", method: :delete %>
       </div>
     <% end %>
   </ul>

@@ -1,5 +1,7 @@
 class User < ApplicationRecord
 
+  has_many :jobs, dependent: :destroy
+
   attr_accessor :remember_token
 
 # email属性を小文字に変換

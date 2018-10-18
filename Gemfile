@@ -18,6 +18,8 @@ gem 'jquery-rails'
 
 gem 'bcrypt',         '3.1.12'
 
+gem 'rmagick'
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
